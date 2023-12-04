@@ -1,6 +1,40 @@
 {
-  "extends": "expo/tsconfig.base",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Expo",
   "compilerOptions": {
-    "strict": true
-  }
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@tests/*": ["__tests__/*"]
+    },
+    "plugins": [
+      {
+        "transform": "typescript-plugin-styled-components",
+        "type": "config",
+        "minify": true,
+        "ssr": true
+      }
+    ],
+    "types": ["react-native", "jest", "node"],
+    "strict": true,
+    "target": "ESNext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "checkJs": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
+    "typeRoots": ["node_modules/@types"]
+  },
+  "include": ["src", "styled.d.ts", "__tests__/index.ts", "jest.config.js", "babel.config.js", "metro.config.js"],
+  "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"]
 }
