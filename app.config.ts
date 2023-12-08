@@ -35,6 +35,7 @@ export default (): ExpoConfig => ({
   web: {
     favicon: './assets/favicon.png',
   },
+  owner: 'furtadodiegos',
   extra: {
     eas: {
       projectId: '8eaac3d9-dee7-4ec0-abcf-f37881940023',
