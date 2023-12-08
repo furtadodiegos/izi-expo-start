@@ -13,7 +13,7 @@
     "prepare": "husky install",
     "postinstall": "yarn prepare",
     "test": "jest",
-    "eas-build-on-success": "bash ./path/to/eas-build-on-success.sh"
+    "eas-build-on-success": "bash ./eas-build-on-success.sh"
   },
   "dependencies": {
     "@apollo/client": "^3.8.7",
