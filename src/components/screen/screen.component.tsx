@@ -13,19 +13,14 @@ type AppScreenProps = StyledViewProps & {
   barStyle?: StatusBarStyle;
 };
 
-const AppScreen: FC<AppScreenProps> = ({ edges, barStyle, style, children, ...rest }) => {
-  return (
-    <StyledSafeAreaView edges={edges} {...rest}>
-      <StatusBar barStyle={barStyle} />
+const AppScreen: FC<AppScreenProps> = ({ edges, barStyle, style, children, ...rest }) => (
+  <StyledSafeAreaView edges={edges} {...rest}>
+    <StatusBar barStyle={barStyle} />
 
-      <StyledKeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
-        // keyboardVerticalOffset={keyboardOffset}
-      >
-        <StyledView style={style}>{children}</StyledView>
-      </StyledKeyboardAvoidingView>
-    </StyledSafeAreaView>
-  );
-};
+    <StyledKeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
+      <StyledView style={style}>{children}</StyledView>
+    </StyledKeyboardAvoidingView>
+  </StyledSafeAreaView>
+);
 
 export default AppScreen;

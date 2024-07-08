@@ -6,15 +6,13 @@ import { apolloClient } from './apollo';
 import { AppStartProvider, AppThemeProvider } from './context';
 import { AppNavigation } from './router';
 
-export const AppProviders: FC<PropsWithChildren> = ({ children }) => {
-  return (
-    <ApolloProvider client={apolloClient}>
-      <AppThemeProvider>
-        <AppStartProvider>{children}</AppStartProvider>
-      </AppThemeProvider>
-    </ApolloProvider>
-  );
-};
+export const AppProviders: FC<PropsWithChildren> = ({ children }) => (
+  <ApolloProvider client={apolloClient}>
+    <AppThemeProvider>
+      <AppStartProvider>{children}</AppStartProvider>
+    </AppThemeProvider>
+  </ApolloProvider>
+);
 
 export default function AppNative() {
   return (

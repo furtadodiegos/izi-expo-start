@@ -9,8 +9,8 @@ type AppButtonProps = TouchableOpacityProps & {
   title?: string;
 };
 
-const AppButton: FC<AppButtonProps> = ({ title, children, ...rest }) => {
-  return <StyledButton {...rest}>{children || <Text>{title}</Text>}</StyledButton>;
-};
+const AppButton: FC<AppButtonProps> = ({ title, children, ...rest }) => (
+  <StyledButton {...rest}>{children || <Text>{title}</Text>}</StyledButton>
+);
 
 export default AppButton;

@@ -1,11 +1,21 @@
 module.exports = {
   root: true,
-  extends: ['eslint:recommended', 'plugin:import/typescript', 'airbnb-typescript-prettier'],
+  extends: [
+    'eslint:recommended',
+    'plugin:import/typescript',
+    'airbnb',
+    'airbnb/hooks',
+    'prettier',
+    'plugin:react/recommended',
+    'plugin:prettier/recommended',
+    'plugin:@typescript-eslint/recommended',
+  ],
   parserOptions: {
     sourceType: 'module',
+    project: './tsconfig.json',
   },
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', '@typescript-eslint/eslint-plugin', 'simple-import-sort', 'react-native'],
+  plugins: ['@typescript-eslint', '@typescript-eslint/eslint-plugin', 'simple-import-sort', 'react-native', 'prettier'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
@@ -17,6 +27,7 @@ module.exports = {
     },
   ],
   rules: {
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'import/no-named-default': 'off',
     'react/function-component-definition': 'off',
     'react/no-unstable-nested-components': 'off',
@@ -46,5 +57,6 @@ module.exports = {
       },
     ],
   },
-  ignorePatterns: ['__tests__/**/*.tsx', '__coverage__/**/*.js', 'jest.config.ts', 'tsconfig.json'],
+  // Exclude this file from ESLint's list of included files
+  ignorePatterns: ['__tests__/**/*.tsx', '__coverage__/**/*.js', 'jest.config.ts', 'tsconfig.json', '.eslintrc.js'],
 };
