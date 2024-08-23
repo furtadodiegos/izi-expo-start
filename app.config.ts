@@ -1,14 +1,15 @@
 import type { ExpoConfig } from '@expo/config';
 
-const BUNDLE_ID = 'com.dfti.startizi';
+const { BUNDLE_ID, PROJECT_ID, OWNER, NAME = '', SLUG = '', SCHEME = '' } = process.env;
 
 export default (): ExpoConfig => ({
-  name: 'startizi',
-  slug: 'startizi',
+  name: NAME,
+  slug: SLUG,
   version: '1.0.0',
   orientation: 'portrait',
   icon: './assets/icon.png',
   userInterfaceStyle: 'light',
+  scheme: SCHEME,
   splash: {
     image: './assets/splash.png',
     resizeMode: 'contain',
@@ -35,10 +36,11 @@ export default (): ExpoConfig => ({
   web: {
     favicon: './assets/favicon.png',
   },
-  owner: 'furtadodiegos',
+  owner: OWNER,
   extra: {
     eas: {
-      projectId: '8eaac3d9-dee7-4ec0-abcf-f37881940023',
+      projectId: PROJECT_ID,
     },
   },
+  plugins: [['expo-router'], ['expo-font']],
 });

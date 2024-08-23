@@ -1,7 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 import { render } from '@testing-library/react-native';
 import type { FC, ReactElement } from 'react';
-import { AppProviders } from '../src';
+import { AppProviders } from '../src/app/_layout';
 
 const customRender = (ui: ReactElement) => {
   const Wrapper: FC<PropsWithChildren> = ({ children }) => <AppProviders>{children}</AppProviders>;

@@ -33,6 +33,7 @@ module.exports = {
     'react/no-unstable-nested-components': 'off',
     'import/no-unresolved': 'off',
     'global-require': 'off',
+    'react/react-in-jsx-scope': 'off',
     camelcase: 'off',
     'import/extensions': 'off',
     '@typescript-eslint/consistent-type-imports': 'error',
@@ -58,5 +59,13 @@ module.exports = {
     ],
   },
   // Exclude this file from ESLint's list of included files
-  ignorePatterns: ['__tests__/**/*.tsx', '__coverage__/**/*.js', 'jest.config.ts', 'tsconfig.json', '.eslintrc.js'],
+  ignorePatterns: [
+    '__tests__/**/*.tsx',
+    '__coverage__/**/*.js',
+    'jest.config.ts',
+    'tsconfig.json',
+    '.eslintrc.js',
+    'app.config.ts',
+    'tailwind.config.js',
+  ],
 };

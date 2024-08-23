@@ -1,8 +1,0 @@
-appId: com.dfti.startizi
----
-- launchApp:
-    clearState: true
-# - openLink: exp://127.0.0.1:8081
-# - tapOn: 'Change me!'
-# - inputText: 'Hello, Maestro!'
-- assertVisible: 'OnboardingScreen'

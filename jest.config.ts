@@ -16,5 +16,6 @@ export default {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@tests/(.*)$': '<rootDir>/__tests__/$1',
+    '\\.css$': 'identity-obj-proxy',
   },
 };

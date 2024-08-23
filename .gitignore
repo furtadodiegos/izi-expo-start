@@ -39,3 +39,4 @@ yarn-error.*
 /.husky
 .env.production
 .env.staging
+.env

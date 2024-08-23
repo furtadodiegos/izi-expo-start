@@ -3,7 +3,6 @@ import { loadDevMessages, loadErrorMessages } from '@apollo/client/dev';
 import fetch from 'cross-fetch';
 
 if (__DEV__) {
-  // Adds messages only in a dev environment
   loadDevMessages();
   loadErrorMessages();
 }

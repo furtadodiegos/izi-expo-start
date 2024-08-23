@@ -1,0 +1,13 @@
+appId: com.dfti.startizi
+# onFlowStart:
+# - runScript: scripts/launchApp.js
+# onFlowComplete:
+#   - runFlow: teardown.yaml
+#   - runScript: teardown.js
+---
+- launchApp:
+    clearState: false
+
+- runFlow: start.yaml
+# - runFlow: sign-in.yaml
+# - runFlow: send-message.yaml

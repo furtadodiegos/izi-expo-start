@@ -1,0 +1,9 @@
+appId: com.dfti.startizi
+---
+- waitForAnimationToEnd:
+    timeout: 5000
+
+- assertVisible:
+    id: 'homeScreen'
+- assertVisible: 'XXX'
+- assertVisible: 'XXX2'
